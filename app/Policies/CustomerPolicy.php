@@ -13,7 +13,7 @@ class CutomerPolicy
      */
     public function viewAny(User $user): bool
     {
-        //
+       return false;
     }
 
     /**
@@ -21,7 +21,7 @@ class CutomerPolicy
      */
     public function view(User $user, Cutomer $cutomer): bool
     {
-        //
+        return false;
     }
 
     /**
@@ -29,7 +29,7 @@ class CutomerPolicy
      */
     public function create(User $user): bool
     {
-        //
+        return false;
     }
 
     /**
@@ -37,7 +37,7 @@ class CutomerPolicy
      */
     public function update(User $user, Cutomer $cutomer): bool
     {
-        //
+        return false;
     }
 
     /**
@@ -45,7 +45,7 @@ class CutomerPolicy
      */
     public function delete(User $user, Cutomer $cutomer): bool
     {
-        //
+        return false;
     }
 
     /**
@@ -53,7 +53,7 @@ class CutomerPolicy
      */
     public function restore(User $user, Cutomer $cutomer): bool
     {
-        //
+        return false;
     }
 
     /**
@@ -61,6 +61,6 @@ class CutomerPolicy
      */
     public function forceDelete(User $user, Cutomer $cutomer): bool
     {
-        //
+        return false;
     }
 }
