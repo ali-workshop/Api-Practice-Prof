@@ -15,8 +15,6 @@ class InvoicesController extends Controller
     {
         #start wiht implmentation some basics 
 
-
-        hi theere
     }
 
     /**
