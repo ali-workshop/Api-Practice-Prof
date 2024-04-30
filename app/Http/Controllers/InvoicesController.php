@@ -14,6 +14,9 @@ class InvoicesController extends Controller
     public function index()
     {
         #start wiht implmentation some basics 
+
+
+        hi theere
     }
 
     /**
