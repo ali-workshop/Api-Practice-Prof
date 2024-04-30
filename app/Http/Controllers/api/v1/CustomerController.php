@@ -6,14 +6,14 @@ use App\Models\Customer;
 use App\Http\Requests\StoreCutomerRequest;
 use App\Http\Requests\UpdateCutomerRequest;
 use App\Http\Controllers\Controller;
-class CutomerController extends Controller
+class CustomerController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        //
+        return Customer::all();
     }
 
     /**
