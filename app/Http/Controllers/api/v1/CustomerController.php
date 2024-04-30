@@ -3,9 +3,11 @@
 namespace App\Http\Controllers\api\v1;
 
 use App\Models\Customer;
+use App\Http\Controllers\Controller;
+use App\Http\Resources\CustomerResource;
 use App\Http\Requests\StoreCutomerRequest;
 use App\Http\Requests\UpdateCutomerRequest;
-use App\Http\Controllers\Controller;
+
 class CustomerController extends Controller
 {
     /**
@@ -37,7 +39,7 @@ class CustomerController extends Controller
      */
     public function show(Customer $customer)
     {
-        //
+        return response()->json(new CustomerResource($customer));
     }
 
     /**
