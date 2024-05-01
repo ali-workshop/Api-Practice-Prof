@@ -17,7 +17,7 @@ class InvoicesController extends Controller
      */
     public function index()
     {
-       $invoices=Invoices::all();
+       $invoices=Invoices::paginate();
         return new InvoiceCollection($invoices);
 
 
