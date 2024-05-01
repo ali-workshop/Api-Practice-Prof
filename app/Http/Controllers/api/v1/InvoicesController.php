@@ -2,11 +2,13 @@
 
 namespace App\Http\Controllers\api\v1;
 
+use App\Http\Resources\v1\InvoiceResource;
 use App\Models\Invoices;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\StoreInvoicesRequest;
 use App\Http\Requests\UpdateInvoicesRequest;
+use App\Http\Resources\v1\InvoiceCollection;
 
 class InvoicesController extends Controller
 {
@@ -15,7 +17,9 @@ class InvoicesController extends Controller
      */
     public function index()
     {
-        #start wiht implmentation some basics 
+       $invoices=Invoices::all();
+        return new InvoiceCollection($invoices);
+
 
     }
 
@@ -40,7 +44,7 @@ class InvoicesController extends Controller
      */
     public function show(Invoices $invoices)
     {
-        //
+        return response()->json(new InvoiceResource($invoices));
     }
 
     /**
