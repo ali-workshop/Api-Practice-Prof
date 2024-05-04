@@ -19,20 +19,18 @@ class CustomerController extends Controller
         return new CustomerCollection(Customer::paginate());
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
-    {
-        //
-    }
+
 
     /**
      * Store a newly created resource in storage.
      */
     public function store(StoreCutomerRequest $request)
     {
-        //
+        Customer::create();
+
+    
+    
+    
     }
 
     /**
