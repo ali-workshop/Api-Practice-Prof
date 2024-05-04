@@ -33,6 +33,18 @@ public function transform(Request $request):array {
 $eloq=[];
 foreach($this->allawedParams as $parm=>$operators)
 $query=$request->query($parm);
+if (!isset($query)){
+foreach($operators as $operator){
+$column=$query[$operator];
+
+
+
+}
+
+
+}
+
+
 
 
 {
