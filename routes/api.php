@@ -18,4 +18,5 @@ Route::apiResource('customers',CustomerController::class);
 
 Route::apiResource('invoices',InvoicesController::class);
 
+
 });
