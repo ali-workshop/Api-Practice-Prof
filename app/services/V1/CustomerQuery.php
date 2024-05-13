@@ -29,17 +29,32 @@ protected  $operatorMap=[
 
 ];
 
-public function transform(Request $request):array
+public function transform(Request $request)
 {
     $eloquery=[];
 
    foreach ($this->allawedParams as $param=>$operators)
    {
-        $query=$request->query($param);
-        dd($query);
 
+        $query=$request->query($param);
+        if(!isset($query)){
+            continue;
+        }
+        $column=$this->columnsMap[$param]?? $param;
+        foreach($operators as $operator){
+            // dd($operator);   
+            if(isset($query[$operator]))
+            {
+                $eloquery[]=[$column,$this->operatorMap[$operator],$query($operator)];
+                return $eloquery;
+            }
+            else {
+                $eloquery[]=[$column,'=',$query];
+                return $eloquery;
+            }
+        }
    }
-    return $eloquery;
+    
 
 }
 
