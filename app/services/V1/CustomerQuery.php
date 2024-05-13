@@ -37,7 +37,7 @@ if (!isset($query)){
 foreach($operators as $operator){
 $column=$query[$operator];
 
-
+#continue implementing new featues and understadn the over all method
 
 }
 
