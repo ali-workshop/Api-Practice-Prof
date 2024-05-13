@@ -29,6 +29,7 @@ protected  $operatorMap=[
 
 ];
 
+#test this function after edition and search for fitlering course profeiessnal ways.
 public function transform(Request $request)
 {
     $eloquery=[];
