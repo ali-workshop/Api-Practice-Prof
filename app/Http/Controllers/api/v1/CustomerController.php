@@ -3,10 +3,12 @@
 namespace App\Http\Controllers\api\v1;
 
 use App\Models\Customer;
+use Illuminate\Http\Request;
+use App\Services\V1\CustomerQuery;
 use App\Http\Controllers\Controller;
-use App\Http\Resources\v1\CustomerResource;
 use App\Http\Requests\StoreCutomerRequest;
 use App\Http\Requests\UpdateCutomerRequest;
+use App\Http\Resources\v1\CustomerResource;
 use App\Http\Resources\v1\CustomerCollection;
 
 class CustomerController extends Controller
@@ -36,8 +38,13 @@ class CustomerController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Customer $customer)
+    public function show(Customer $customer, Request $request)
     {
+
+
+        $filter=new CustomerQuery();
+        $rr=$filter->transform($request);
+        dd($rr);
         return response()->json(new CustomerResource($customer));
     }
 

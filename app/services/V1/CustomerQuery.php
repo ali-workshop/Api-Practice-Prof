@@ -29,38 +29,19 @@ protected  $operatorMap=[
 
 ];
 
-public function transform(Request $request):array {
-$eloq=[];
-foreach($this->allawedParams as $parm=>$operators)
-$query=$request->query($parm);
-if (!isset($query)){
-foreach($operators as $operator){
-$column=$query[$operator];
-
-#continue implementing new featues and understadn the over all method
-
-}
-
-
-}
-
-
-
-
+public function transform(Request $request):array
 {
+    $eloquery=[];
 
+   foreach ($this->allawedParams as $param=>$operators)
+   {
+        $query=$request->query($param);
+        dd($query);
 
-
+   }
+    return $eloquery;
 
 }
-
-
-
-
-return $eloq;
-
-}
-
 
 
 
