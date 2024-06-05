@@ -32,6 +32,7 @@ class CustomerController extends Controller
 
 #logic one
 """
+ADDDD seding tasks for each seed you make 
 get the all reserved room and then check the room each if it is existis in this
 and room append if not
 
