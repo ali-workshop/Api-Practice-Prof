@@ -30,46 +30,6 @@ class CustomerController extends Controller
         $end_data=$request->endData();
 
 
-#logic one
-"""
-ADDDD seding tasks for each seed you make 
-get the all reserved room and then check the room each if it is existis in this
-and room append if not
-
-"""
-
-
-#logic two
-
-"""
-
-get the all rooms that the satus is not booked(simple one).
-
-
-"""
-
-
-
-#logic three
-
-
-"""
-get all reservations in this data and get the reserved room based this reservatation and then filter the rooms 
-
-"""
-     
-
-#another logic .
-
-        
-
-
-
-
-
-        // return  Room::where('')->paginate();
-
-
     }
 
 
